@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
 
-const Home: NextPage = () => {
-	return <div className='text-white'>Hi</div>
+import Home from '@/components/pages/home/Home'
+
+const HomePage: NextPage = () => {
+	return <Home />
 }
 
-export default Home
+export default HomePage
