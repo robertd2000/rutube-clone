@@ -5,6 +5,7 @@ import { FaUserCircle } from 'react-icons/fa'
 import Button from '@/components/ui/button/Button'
 import Field from '@/components/ui/field/Field'
 
+import { useActions } from '@/hooks/useActions'
 import { useAuth } from '@/hooks/useAuth'
 import { useOutside } from '@/hooks/useOutside'
 
@@ -19,7 +20,8 @@ const AuthForm = () => {
 
 	const [type, setType] = useState<'login' | 'register'>('login')
 
-	// const {isLoading} = useAuth()
+	const { login, register: registerAction } = useActions()
+	const { isLoading } = useAuth()
 
 	const {
 		register,
@@ -31,7 +33,9 @@ const AuthForm = () => {
 
 	const onSubmit: SubmitHandler<IAuthFields> = data => {
 		if (type === 'login') {
+			login(data)
 		} else if (type === 'register') {
+			registerAction(data)
 		}
 	}
 	return (
@@ -57,7 +61,7 @@ const AuthForm = () => {
 					<Field
 						{...register('password', {
 							required: 'Пароль обязателен!',
-							maxLength: {
+							minLength: {
 								value: 6,
 								message: 'Минимальная длина пароля - 6 символов'
 							}
@@ -68,11 +72,14 @@ const AuthForm = () => {
 					/>
 
 					<div className='mt-5 mb-1 text-center'>
-						<Button onClick={() => setType('login')}>Войти</Button>
+						<Button onClick={() => setType('login')} disabled={isLoading}>
+							Войти
+						</Button>
 					</div>
 					<button
 						className={styles.register}
 						onClick={() => setType('register')}
+						disabled={isLoading}
 					>
 						Регистрация
 					</button>

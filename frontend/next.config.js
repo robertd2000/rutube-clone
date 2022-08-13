@@ -4,7 +4,7 @@ const nextConfig = {
 	swcMinify: true,
 	poweredByHeader: false,
 	env: {
-		APP_URL: process.env.APP_URL
+		APP_URL: process.env.NEXT_PUBLIC_APP_URL
 	},
 	images: {
 		domains: ['localhost']

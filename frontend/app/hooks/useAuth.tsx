@@ -1,6 +1,6 @@
-import { IAuthData } from 'services/auth/auth.helper'
+import { IAuthInitialState } from '@/store/auth/auth.interface'
 
-export const useAuth = (): IAuthData => ({
-	user: null,
-	accessToken: ''
-})
+import { useTypedSelector } from './useTypedSelector'
+
+export const useAuth = (): IAuthInitialState =>
+	useTypedSelector(state => state.auth)
