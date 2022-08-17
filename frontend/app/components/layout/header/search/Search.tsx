@@ -1,5 +1,7 @@
 import React, { FC } from 'react'
 
+import VideoItem from '@/components/ui/video-item/VideoItem'
+
 import styles from './Search.module.scss'
 import { useSearch } from './useSearch'
 
@@ -24,9 +26,9 @@ const Search: FC = () => {
 			{isSuccess && (
 				<div className={styles.result}>
 					{data?.length ? (
-						data.map(video => <div key={video.id}>{video.name}</div>)
+						// data.map(video => <div key={video.id}>{video.name}</div>)
+						data.map(video => <VideoItem isSmall item={video} key={video.id} />)
 					) : (
-						// data.map(video => <VideoItem isSmall item={video} key={video.id} />)
 						<div className='text-white'>Видео не найдены!</div>
 					)}
 				</div>

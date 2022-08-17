@@ -12,8 +12,11 @@
 				color: #5c5a69;
 			}
 
-			&:focus {
+			&:focus,
+			&:focus-visible {
 				@apply shadow-md;
+				outline: none;
+				border: none;
 			}
 		}
 
