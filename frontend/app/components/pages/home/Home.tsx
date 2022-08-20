@@ -6,12 +6,11 @@ import Catalog from './catalog/Catalog'
 import Discover from './discover/Discover'
 import { IHome } from './home.interface'
 
-// const Home: FC<IHome> = ({ topVideo, newVideos, randomVideo }) => {
-const Home: FC = () => {
+const Home: FC<IHome> = ({ topVideo, newVideos, randomVideo }) => {
 	return (
 		<Layout title='Rutube v2.0 | Видеохостинг'>
-			<Discover />
-			<Catalog />
+			<Discover topVideo={topVideo} randomVideo={randomVideo} />
+			<Catalog newVideos={newVideos} />
 		</Layout>
 	)
 }
