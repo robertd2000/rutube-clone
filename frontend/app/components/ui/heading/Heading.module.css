@@ -1,0 +1,9 @@
+.title {
+  @apply flex items-center text-white;
+}
+.title > h2 {
+  @apply text-lg mr-4;
+}
+.title > .show-more {
+  @apply text-gray-500 cursor-pointer;
+}/*# sourceMappingURL=Heading.module.css.map */

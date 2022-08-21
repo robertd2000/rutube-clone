@@ -66,13 +66,16 @@ export class UserService {
 			fromUser: { id: userId }
 		}
 		const isSubscribed = await this.subscriptionRepository.findOneBy(data)
-
+		const user = await this.byId(channelId)
 		if (!isSubscribed) {
-			const newSubscription = await this.subscriptionRepository.create(data)
+			const newSubscription = this.subscriptionRepository.create(data)
+			user.subscribersCount = user.subscribersCount + 1
+			await this.userRepository.save(user)
 			await this.subscriptionRepository.save(newSubscription)
-
 			return true
 		}
+		user.subscribersCount = user.subscribersCount - 1
+		await this.userRepository.save(user)
 		await this.subscriptionRepository.delete(data)
 		return false
 	}

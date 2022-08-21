@@ -1,0 +1,47 @@
+.mnu_sidebar {
+  @apply my-8;
+}
+.mnu_sidebar > h3 {
+  @apply text-gray-600 mb-7;
+}
+.mnu_sidebar > ul {
+  @apply list-none;
+}
+.mnu_sidebar > ul > li {
+  @apply block mb-10;
+}
+.mnu_sidebar > ul > li:last-child {
+  @apply mb-0;
+}
+.mnu_sidebar > ul > li > a {
+  @apply flex items-center text-gray-500 font-medium relative;
+}
+.mnu_sidebar > ul > li > a.active {
+  @apply text-white;
+}
+.mnu_sidebar > ul > li > a.active > span {
+  @apply bg-primary;
+}
+.mnu_sidebar > ul > li > a > span {
+  @apply mr-4 p-2 rounded-xl;
+  background-color: #363440;
+}
+.mnu_sidebar > ul > li > a > span.image {
+  @apply overflow-hidden p-0 shadow flex items-center justify-center;
+  margin-right: 1rem !important;
+  background: none;
+  border: 1px solid #363440;
+}
+.mnu_sidebar > ul > li > a > b {
+  @apply font-normal;
+}
+.mnu_sidebar > ul > li > a > span.number {
+  @apply text-red-500;
+}
+.mnu_sidebar > ul > li > a::before {
+  @apply h-full w-1 rounded-lg bg-red-500 absolute -left-7 top-0 -translate-x-1 opacity-0 transition-opacity transition-transform duration-500;
+  content: "";
+}
+.mnu_sidebar > ul > li > a:hover::before {
+  @apply opacity-100 translate-x-0;
+}/*# sourceMappingURL=Menu.module.css.map */

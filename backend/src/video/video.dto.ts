@@ -13,5 +13,5 @@ export class VideoDTO {
 	videoPath: string
 
 	@IsString()
-	thumbNailPath: string
+	thumbnailPath: string
 }

@@ -125,7 +125,7 @@ export class VideoService {
 			user: { id: userId },
 			videoPath: '',
 			description: '',
-			thumbNailPath: ''
+			thumbnailPath: ''
 		}
 
 		const newVideo = this.videoRepository.create(defaultValues)

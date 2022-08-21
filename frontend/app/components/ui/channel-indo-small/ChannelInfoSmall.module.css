@@ -1,0 +1,12 @@
+.profile_info {
+  @apply flex flex-wrap items-center;
+}
+.profile_info > div:last-child {
+  @apply ml-4;
+}
+.profile_info > div:last-child > .name {
+  @apply text-base text-white;
+}
+.profile_info > div:last-child > .subscribers_count {
+  @apply text-xs text-gray-500;
+}/*# sourceMappingURL=ChannelInfoSmall.module.css.map */

@@ -1,0 +1,9 @@
+.channel {
+  @apply mb-10 w-1/3;
+}
+.channel > .info {
+  @apply flex items-center gap-10;
+}
+.channel .article {
+  @apply text-gray-500 mt-3;
+}/*# sourceMappingURL=Channel.module.css.map */

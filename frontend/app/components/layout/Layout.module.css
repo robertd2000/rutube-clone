@@ -1,0 +1,9 @@
+.main {
+  @apply flex flex-wrap;
+}
+.main .content {
+  width: 82%;
+}
+.main .content .wrapper {
+  @apply pl-6 pr-8;
+}/*# sourceMappingURL=Layout.module.css.map */

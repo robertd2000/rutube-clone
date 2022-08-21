@@ -1,0 +1,30 @@
+.wrapper > button {
+  @apply flex items-center;
+}
+.wrapper > button img {
+  @apply rounded-full;
+}
+.wrapper > button .name {
+  @apply mx-3 text-white text-opacity-80;
+}
+.wrapper > button > svg {
+  color: #4e4e5d;
+}
+.wrapper .profile-menu {
+  @apply shadow-block animate-scaleIn p-4 absolute right-2 w-60 z-20 rounded-lg pb-6;
+  top: calc(100% + 1.4rem);
+  background-color: #272532;
+}
+.wrapper .profile-menu > ul > li > a,
+.wrapper .profile-menu > ul > li > button {
+  @apply py-2.5 block text-white transition-colors relative text-left;
+}
+.wrapper .profile-menu > ul > li > a::after,
+.wrapper .profile-menu > ul > li > button::after {
+  @apply absolute w-0 left-0 -bottom-0.5 h-0.5 bg-primary bg-opacity-70 transition-all duration-500 rounded-lg;
+  content: "";
+}
+.wrapper .profile-menu > ul > li > a:hover::after,
+.wrapper .profile-menu > ul > li > button:hover::after {
+  @apply w-full;
+}/*# sourceMappingURL=ProfileMenu.module.css.map */

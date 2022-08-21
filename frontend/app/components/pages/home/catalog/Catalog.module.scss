@@ -8,12 +8,12 @@
 	}
 
 	> .catalog {
-		@apply flex flex-wrap gap-5;
+		@apply flex flex-wrap gap-x-6;
 
 		> div {
 			@apply mb-2.5;
-			flex: 1 1 calc((100% / 4) - 2rem);
-			width: 23%;
+			// flex: 1 1 calc((100% / 4) - 2rem);
+			width: 23.5%;
 		}
 	}
 }

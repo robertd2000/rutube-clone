@@ -1,0 +1,13 @@
+.recommended > .top_block {
+  @apply flex items-center justify-between mb-6;
+}
+.recommended > .top_block > .sort {
+  @apply text-white;
+}
+.recommended > .catalog {
+  @apply flex flex-wrap gap-x-6;
+}
+.recommended > .catalog > div {
+  @apply mb-2.5;
+  width: 23.5%;
+}/*# sourceMappingURL=Catalog.module.css.map */

@@ -1,0 +1,18 @@
+.discover {
+  @apply flex gap-7 mb-10;
+}
+.discover > .top_video {
+  @apply w-2/3;
+}
+.discover > .top_video > .sub_name {
+  @apply text-lg;
+}
+.discover > .top_video > h1 {
+  @apply text-xl my-5 font-semibold;
+}
+.discover > .top_video > .description {
+  @apply text-gray-500 mb-6;
+}
+.discover > .random_video {
+  @apply w-1/3;
+}/*# sourceMappingURL=Discover.module.css.map */

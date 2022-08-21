@@ -1,0 +1,11 @@
+.sidebar {
+  @apply py-5 px-7;
+  width: 18%;
+}
+.sidebar > .logo {
+  @apply text-2xl font-semibold;
+  color: #fefefe;
+}
+.sidebar .copy {
+  @apply text-gray-600 text-opacity-60 text-xs;
+}/*# sourceMappingURL=Sidebar.module.css.map */
