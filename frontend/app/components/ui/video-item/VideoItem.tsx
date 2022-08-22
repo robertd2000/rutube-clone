@@ -18,8 +18,6 @@ const VideoItem: FC<IVideoItem> = ({
 	isUpdateLink,
 	removehandler
 }) => {
-	console.log(item.thumbnailPath)
-
 	const { push } = useRouter()
 	return (
 		<div

@@ -28,8 +28,6 @@ const SubscribeButton: FC<ISubscribeButton> = ({ channelIdForSubscribe }) => {
 			sub => sub.toChannel.id === channelIdForSubscribe
 		) || !!data
 
-	console.log(data)
-
 	return (
 		<button
 			className={cn(styles.button, {
