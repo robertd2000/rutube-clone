@@ -1,0 +1,11 @@
+.likeButton {
+	background-color: #353340;
+
+	&:hover {
+		@apply bg-gray-800;
+	}
+
+	&.active {
+		@apply bg-red-600;
+	}
+}
